@@ -1,0 +1,218 @@
+:root{
+    --ff-header:"poppins", sans-serif;
+    --ff-about: "Raleway", sans-serif;
+    --bg-color: rgba(255, 148, 9, 0.624);
+    --menu-color: rgb(1, 39, 46);
+    --bgc-color: linear-gradient(90deg, rgba(255,148,9,0.61) 27%, rgba(222,167,95,1) 69%);
+    --tt-color: #180025;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    grid-template-areas: 'content';
+    background-color: var(--bg-color);
+}
+.menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: var(--menu-color);
+    font-family: var(--ff-header);
+}
+.menu a{
+    position: relative;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 0 10px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+.menu a:after{
+    content: "";
+    position: absolute;
+    background-color: #145f4f;
+    height: 1px;
+    width: 0;
+    left: 0;
+    bottom: -3px;
+    transition: 0.3s;
+}
+.menu a:hover{
+    color: #00a17e;
+}
+.menu a:hover:after{
+    width: 100%;
+}
+header{
+    position: fixed;
+    grid-area: "content";
+    margin-top: 15px;
+    width: 100px;
+    height: 50px;
+    left: 47%;
+    display: flex;
+    justify-content: center;
+    font-family: var(--ff-body);
+}
+ul,
+li{
+    list-style: none;
+    display: flex;
+}
+nav ul{
+    gap: 3rem;
+}
+main{
+    margin-top: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Ubuntu', sans-serif;
+}
+.home span{
+    font-size: 24px;
+    color: #180025;
+    font-weight: 700px;
+    margin-left: 7px;
+}
+.home{
+    margin-top: 160px;
+    height: 80vh;
+    display: flex;
+    font-weight: 800;
+    text-align: start;
+    font-size: 84px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: rgba(234, 0, 255, 0.795);
+}
+button{
+    margin: 74px 100px;
+    padding: 15px;
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: var(--ff-body);
+    border: 2px solid rgb(0, 9, 34);
+    transition: 200ms;
+    white-space: nowrap;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;;
+}
+button:hover{
+    background-color: rgba(73, 40, 40, 0.856);
+    transform: scale(1.2);
+}
+.cv a{
+    padding: 20px;
+    text-decoration: none;
+    color: var(--tt-color);
+}
+.about{
+    font-family: var(--ff-about);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+h2{
+    font-size: 60px;
+    text-align: center;
+    color: var(--tt-color);
+}
+.skills ul, .skills li{
+    list-style: none;
+}
+.container{
+    display: grid;
+    grid-template-areas: 
+    'A B C'
+    'D E F';
+    gap: 20px;
+}
+.skills-icon{
+    margin-top: 24px;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(58, 197, 158, 0.486);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    border-radius: 20px;
+}
+.skills-icon > li:nth-child(1){
+    grid-area: A;
+}
+.skills-icon > li:nth-child(2){
+    grid-area: B;
+}
+.skills-icon > li:nth-child(3){
+    grid-area: C;
+}
+.skills-icon > li:nth-child(4){
+    grid-area: D;
+}
+.skills-icon > li:nth-child(5){
+    grid-area: E;
+}
+.skills-icon > li:nth-child(6){
+    grid-area: F;
+}
+.card img{
+    display: block;
+    border-radius: 5px;
+    object-fit: scale-down;
+}
+.card > a:nth-child(1){
+    grid-area: A;
+}    
+.card > a:nth-child(2){
+    grid-area: B; 
+}
+.card > a:nth-child(3){
+    grid-area: C; 
+}
+.card > a:nth-child(4){
+    grid-area: D; 
+}
+.card > a:nth-child(5){
+    grid-area: E;
+}
+.card > a:nth-child(6){
+    grid-area: F; 
+}
+.card-container{
+    display: grid;
+}
+.contact ul{
+    display: flex;
+    justify-items: center;
+    margin-top: 200px;
+    gap: 4rem;
+}
+.contact-icon img{
+    display: flex;
+    width: 70px;
+    height: 70px;
+}
+.contact-icon{
+    width: 100px;
+    height: 100px;
+    background-color: rgba(252, 252, 252, 0.856);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    border-radius: 20px;
+}

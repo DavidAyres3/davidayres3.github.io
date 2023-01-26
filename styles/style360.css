@@ -1,0 +1,98 @@
+@media(min-width: 360px){
+    .menu{
+        height: 40px;
+    }
+
+    .menu a{
+        font-size: 12px;
+    }
+
+    header{
+        margin-top: 15px;
+        left: 37%
+    }
+
+    nav ul{
+        gap: 10px
+    }
+
+
+    main{
+        margin-top: 10px;
+    }
+
+    .home{
+        margin-top: 240px;
+        display: block;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    h2{
+        margin-top: 30px
+    }
+
+    h1{
+        margin: 20px 0;
+    }
+
+    button{
+        margin-top: 80px;
+        font-size: 12px;
+    }
+
+    button:hover{
+        transform: scale(1.1);
+    }
+
+    .about p{
+        font-size: 12px;
+    }
+
+    .about h3{
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .description{
+        display: block;
+        text-align: center;
+    }
+
+    .skills-icon{
+        margin-left: 4%;
+    }
+
+    svg{
+        width: 30px;
+        height: 30px;
+    }
+
+    .card-container{
+        margin: 20px auto;
+    }
+
+    .card img{
+        width: 14rem;
+        margin-bottom: 20px;
+    }
+
+    .contact ul{
+        display: block;
+        margin: 10px auto;
+    }
+
+    .contact li{
+        margin: 10px auto
+    }
+
+    .contact-icon{
+        width: 45px;
+        height: 45px;
+
+    }
+    .contact-icon img{
+        width: 30px;
+        height: 30px;
+    }
+}

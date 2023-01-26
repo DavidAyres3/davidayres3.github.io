@@ -1,0 +1,59 @@
+@media (min-width: 1280px){
+
+    header{
+        left: 46%;
+    }
+
+    .home h1{
+        font-size: 50px;
+    }
+
+    .home span{
+        font-size: 38px;
+    }
+    
+    .home .title{
+        margin-top: 60px;
+    }
+
+    .cv{
+        margin-top: 70px;
+    }
+    h2{
+        font-size: 50px;
+    }
+
+    .description{
+        margin-bottom: 180px;
+    }
+
+    .about h3{
+        font-size: 40px;
+    }
+
+    .about p{
+        font-size: 20px;
+        font-weight: 700;
+    }
+    svg {
+        width: 100px;
+        height: 100px;
+    }
+
+    .skills-icon{
+        width: 160px;
+        height: 160px;
+    }
+
+    .projects{
+        padding-bottom: 150px;
+    }
+
+    .card img{
+        width: 22rem;
+    }
+
+    .card-container{
+        gap: 36px;
+    }
+}

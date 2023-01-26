@@ -1,0 +1,55 @@
+@media(min-width: 1024px){
+
+    header{
+        left: 44.5%
+    }
+    .home{
+        align-items: center;
+        margin-top: 50px;
+        font-size: 50px;
+    }
+    .home span{
+        font-size: 35px;
+    }
+    h2{
+        margin-top: 60px;
+        font-size: 50px;
+    }
+    .about h3{
+        margin-top: 50px;
+        font-size: 40px;
+    }
+    .description{
+        gap: 150px;
+        margin-top: 20px;
+    }
+    .about p{
+        font-size: 16px;
+        font-weight: 700;
+    }
+    
+    .skills .container{
+        margin-right: 65px
+    }
+    svg {
+        width: 80px;
+        height: 60px;
+    }
+    .projects{
+        padding-bottom: 150px;
+    }
+    .card img{
+        width: 13rem;
+    }
+    .card-container{
+        padding-top: 30px;
+        gap: 30px;
+        grid-template-areas: 
+        'A B'
+        'C D'
+        'E F';
+    }
+    .contact{
+        padding-bottom: 240px;
+    }
+    }

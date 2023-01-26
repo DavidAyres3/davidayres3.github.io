@@ -1,0 +1,43 @@
+@media (min-width: 1600px){
+    .home {
+        display: flex;
+        gap: 10rem;
+        margin-top: 60px;
+    }
+    h2 {
+        margin-top: 70px;
+        font-size: 60px;
+    }
+    .about h3{
+        font-size: 50px;
+    }
+    .description {
+        gap: 200px;
+        margin-bottom: 200px;
+    }
+    .about p{
+        font-size: 24px;
+        font-weight: 700
+    };
+    svg{
+        width: 100px;
+        height: 100px;
+    }
+    .skills-icon{
+        width: 180px;
+        height: 180px;
+    }
+    .projects{
+        padding-bottom: 150px;
+    }
+    .card img{
+        width: 25rem;
+    }
+    .card-container {
+        gap: 48px;
+        display: grid;
+        grid-template-areas: 
+        'A B C'
+        'D E F';
+    }
+}
