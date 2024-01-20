@@ -29,7 +29,7 @@ function register(){
 
         console.log('Usuário registrado: ', data)
 
-        window.location.href = '../pages/login.html'
+        window.location.href = '../index.html'
     })
     .catch(e => {
         console.error('Erro ao registrar novo usuário.', e)
@@ -47,5 +47,5 @@ form.addEventListener('submit', (e) => {
 
 backButton.addEventListener('click', (e) => {
     e.preventDefault();
-    window.location.href = '../pages/login.html'
+    window.location.href = '../index.html'
 })
