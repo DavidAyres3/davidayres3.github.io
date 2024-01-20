@@ -50,5 +50,5 @@ form.addEventListener('submit', (e) => {
 
 backButton.addEventListener('click', (e) => {
     e.preventDefault();
-    window.location.href = '/src/pages/register.html'
+    window.location.href = '../src/pages/register.html'
 })
