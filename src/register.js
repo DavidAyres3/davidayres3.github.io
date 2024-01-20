@@ -16,7 +16,7 @@ function register(){
         password: passwordInput.value
     }
 
-    fetch('http://localhost:3333/register',{
+    fetch('https://dvd-deploy-cyclic.cyclic.app/register',{
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
