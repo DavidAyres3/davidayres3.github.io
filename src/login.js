@@ -12,7 +12,7 @@ function login() {
     };
 
     
-    fetch('http://localhost:3333/login', {
+    fetch('https://dvd-deploy-cyclic.cyclic.app/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
