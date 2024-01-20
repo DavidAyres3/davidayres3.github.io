@@ -28,7 +28,7 @@ function login() {
             delete userDataWithoutPassword.password;
             const userDataJSON = JSON.stringify(userDataWithoutPassword);
             localStorage.setItem('userData', userDataJSON);
-            window.location.href = "./pages/main.html";
+            window.location.href = "../src/pages/main.html";
         } else {
             alert("Usuário ou senha inválidos.");
             throw new Error('Credenciais inválidas');
