@@ -18,7 +18,7 @@ if(userData) {
 }
 
 async function getUser() {
-    return fetch(`http://localhost:3333/users/${username}`)
+    return fetch(`https://dvd-deploy-cyclic.cyclic.app/users/${username}`)
         .then(res => {
             if (res.status === 200) {
                 return res.json()
@@ -35,7 +35,7 @@ function handleUserData() {
                 localStorage.removeItem('userId')
             }
             localStorage.setItem('userId', userDataJSON)
-            fetch(`http://localhost:3333/tasks/${user}`)
+            fetch(`https://dvd-deploy-cyclic.cyclic.app/tasks/${user}`)
                 .then(res => {
                     if (res.status === 200)
                         return res.json()
@@ -67,7 +67,7 @@ function newTask() {
         description: input.value
     }
 
-    fetch('http://localhost:3333/task/register', {
+    fetch('https://dvd-deploy-cyclic.cyclic.app/task/register', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
