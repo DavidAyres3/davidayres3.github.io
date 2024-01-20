@@ -4,9 +4,18 @@ const input = document.getElementById('newTask')
 const enter = document.getElementById('enter')
 
 const userData = localStorage.getItem('userData')
-const userObject = JSON.parse(userData)
-const username = userObject.username
-title.innerHTML = `Lista de tarefas | ${username}`
+
+if(userData) {
+    const userObject = JSON.parse(userData)
+    
+    if(userObject && userObject.username){
+        title.innerHTML = `Lista de tarefas | ${username}`
+    }
+    
+} else {
+    alert('Você precisa realizar login.')
+    window.location.href = "/index.html"
+}
 
 async function getUser() {
     return fetch(`http://localhost:3333/users/${username}`)
