@@ -17,6 +17,8 @@ if(userData) {
     window.location.href = "/index.html"
 }
 
+const username = userObject.username
+
 async function getUser() {
     return fetch(`https://dvd-deploy-cyclic.cyclic.app/users/${username}`)
         .then(res => {
