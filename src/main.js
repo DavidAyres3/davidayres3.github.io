@@ -9,6 +9,7 @@ if(userData) {
     const userObject = JSON.parse(userData)
     
     if(userObject && userObject.username){
+        const username = userObject.username
         title.innerHTML = `Lista de tarefas | ${username}`
     }
     
@@ -17,6 +18,7 @@ if(userData) {
     window.location.href = "/index.html"
 }
 
+const userObject = JSON.parse(userData)
 const username = userObject.username
 
 async function getUser() {
