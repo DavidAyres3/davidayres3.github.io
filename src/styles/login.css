@@ -1,15 +1,33 @@
+:root {
+    --cor-button: #000000;
+    --cor-texto-button: #ffffff;
+    --cor-fundo-body: #2c3e50;
+    --cor-texto-body: #ecf0f1;
+    --cor-fundo-tarefas: #1d2a36;
+    --cor-fundo-content: #34495e;
+    --text-shadow-h1: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    --cor-sombra-input: rgba(0, 0, 0, 0.1);
+    --cor-borda-tarefas: grey;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #2c3e50; /* Cor de fundo do corpo */
-    color: #ecf0f1; /* Cor do texto geral */
+    background-color: var(--cor-fundo-body);
+    color: var(--cor-texto-body);
 }
 
 h1{
     margin-top: 200px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: var( --text-shadow-h1);
 }
 
 form {
@@ -18,7 +36,7 @@ form {
     align-items: center;
     justify-content: center;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--cor-sombra-input);
     padding: 20px;
     width: 500px;
 }
@@ -31,12 +49,12 @@ input {
     font-size: 20px;
     width: 400px;
     height: 50px;
-    background-color: #01080f28; /* Cor de fundo do input */
-    border: 1px solid #2c3e50; /* Cor da borda do input */
+    background-color: var(--cor-fundo-content);
+    border: 1px solid var(--cor-fundo-body);
     transition: 1.2s;
     scale: 1.05;
-    color: #ffffffb0; /* Cor do texto do input */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #ffffffb0;
+    box-shadow: var(--cor-sombra-input);
 }
 
 .buttons{
@@ -50,8 +68,8 @@ button {
     width: 205px;
     margin-top: 10px;
     padding: 10px;
-    background-color: #000000a1;
-    color: #ffffff;
+    background-color: var(--cor-button);
+    color: var(--cor-texto-button);
     border: none;
     border-radius: 4px;
     cursor: pointer;
