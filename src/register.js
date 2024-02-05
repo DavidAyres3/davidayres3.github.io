@@ -1,5 +1,6 @@
+const firstnameInput = document.getElementById('firstname')
+const lastnameInput = document.getElementById('lastname')
 const usernameInput = document.getElementById('username')
-const emailInput = document.getElementById('email')
 const passwordInput = document.getElementById('password')
 const registerButton = document.getElementById('register')
 const backButton = document.getElementById('back')
@@ -8,7 +9,6 @@ const form = document.getElementById('form')
 function register(){
     const userData = {
         username: usernameInput.value,
-        email: emailInput.value,
         password: passwordInput.value
     }
 
@@ -34,7 +34,7 @@ function register(){
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-    if (!usernameInput.value || !emailInput.value || !passwordInput.value) {
+    if (!usernameInput.value || !passwordInput.value) {
         alert('Por favor, preencha todos os campos.');
         return;
     }
