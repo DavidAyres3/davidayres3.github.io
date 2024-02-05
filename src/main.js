@@ -2,8 +2,11 @@ const title = document.getElementById('title');
 const avatar = document.getElementById('avatar')
 const input = document.getElementById('newTask')
 const enter = document.getElementById('enter')
+const update = document.getElementById('update')
 
 const userData = localStorage.getItem('userData')
+
+
 
 if(userData) {
     const userObject = JSON.parse(userData)
@@ -52,21 +55,50 @@ async function handleUserData() {
                 var div = document.createElement("div");
                 var p = document.createElement("p");
                 var strong = document.createElement("strong")
-                var img = document.createElement("img")
+                var delet = document.createElement("img")
+                var edit = document.createElement("img")
 
                 p.setAttribute("task-id", task.id)
                 p.textContent = task.description
                 strong.textContent = task.createdAt;
-                img.id = "del"
-                img.src = "/src/svg/icons8-lixeira.svg";
+                delet.id = "del"
+                delet.src = "/src/svg/delete.svg";
+                edit.id = "edit"
+                edit.src = "/src/svg/editar.svg"
 
-                img.addEventListener("click", function() {
+                delet.addEventListener("click", function() {
                     handleImageClick(task.id);
                 });
 
-                div.appendChild(img);
+                edit.addEventListener("click", function(){
+                    toggleButtons()
+                })
+
+                update.addEventListener("click", function(){
+                    const data = {
+                        description: input.value
+                    }
+                    fetch(`https://dvd-deploy-cyclic.cyclic.app/task/update/${task.id}`, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                })
+                    location.reload()
+                })
+
+                input.onblur = function(){
+                    setTimeout(function(){
+                        enter.style.display = "inline-flex"
+                        update.style.display = "none"
+                    }, 100)
+                }
+
+                div.appendChild(delet);
                 div.appendChild(p);
                 div.appendChild(strong)
+                div.appendChild(edit)
 
                 taskList.appendChild(div);
             });
@@ -81,7 +113,7 @@ async function handleUserData() {
 handleUserData()
 
 function handleImageClick(taskId) {
-    fetch(`https://dvd-deploy-cyclic.cyclic.app/task/delete/${taskId}`, {
+    fetch(`https://dvd-deploy-cyclic.cyclic.app/delete/task/${taskId}`, {
         method: 'DELETE'
     })
     .then(res => {
@@ -95,6 +127,12 @@ function handleImageClick(taskId) {
     .catch(error => {
         console.error("Erro na requisição:", error);
     });
+}
+
+function toggleButtons(){
+    input.placeholder = "alterar tarefa"
+    input.focus()
+    updateButton()
 }
 
 function newTask() {
@@ -114,6 +152,15 @@ function newTask() {
     })
 }
 
+function enterButton(){
+    update.style.display = 'none'
+    enter.style.display = 'inline-flex'
+}
+
+function updateButton(){
+    enter.style.display = 'none'
+    update.style.display = 'inline-flex'
+}
 
 enter.addEventListener('click', (e) => {
     newTask();
