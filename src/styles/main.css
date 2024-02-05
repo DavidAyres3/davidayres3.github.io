@@ -1,8 +1,8 @@
 :root {
-    --cor-fundo-body: #2c3e50;
-    --cor-texto-body: #ecf0f1;
-    --cor-fundo-tarefas: #1d2a36;
-    --cor-fundo-content: #34495e;
+    --cor-fundo-body: #F9FAFB;
+    --cor-texto-body: #334155;
+    --cor-fundo-tarefas: #8998b82a;
+    --cor-fundo-content: #E9ECEF;
     --text-shadow-h1: 2px 2px 4px rgba(0, 0, 0, 0.5);
     --cor-sombra-input: rgba(0, 0, 0, 0.1);
 }
@@ -12,6 +12,8 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+
 
 body{
     background-color: var(--cor-fundo-body);
@@ -54,25 +56,43 @@ input {
     box-shadow: var(--cor-sombra-input);
 }
 
+input::placeholder{
+    color: #000000;
+    opacity: .3;
+}
+
+
 #enter {
     width: 40px;
     vertical-align: middle;
     cursor: pointer;
+    display: inline-flex;
 }
 
-#enter:hover{
+#update{
+    width: 40px;
+    vertical-align: middle;
+    cursor: pointer;
+    display: none;
+}
+
+#enter:hover, #update:hover{
     margin-left: 20px;
     transition: 1s;
     scale: 1.4;
 }
 
-#enter:not(:hover){
+#enter:not(:hover), #update:not(:hover){
     transition: 1s;
 }
 
 #tarefas img{
-    margin-right: 20px;
+    margin-right: 10px;
     cursor: pointer;
+}
+
+div:nth-child(n) img#edit{
+    margin-left: 10px
 }
 
 
